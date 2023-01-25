@@ -59,31 +59,34 @@ function App() {
   return (
     <>
       <form className="header" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="category">Category</label>
-          <select id="category" ref={categoryEl}>
-            {categories.map((category) => {
-              return (
-                <option value={category.id} key={category.id}>
-                  {category.name}
-                </option>
-              );
-            })}
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="amount">Number Of Questions</label>
-          <input
-            type="number"
-            id="amount"
-            min="1"
-            step="1"
-            defaultValue={10}
-            ref={amountEl}
-          />
-        </div>
-        <div className="form-group">
-          <button className="btn">Generate</button>
+        <div className="logo">Trivia-Mania</div>
+        <div className="form-group-container">
+          <div className="form-group">
+            <label htmlFor="category">Category</label>
+            <select id="category" ref={categoryEl}>
+              {categories.map((category) => {
+                return (
+                  <option value={category.id} key={category.id}>
+                    {category.name}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="amount">Number Of Questions</label>
+            <input
+              type="number"
+              id="amount"
+              min="1"
+              step="1"
+              defaultValue={10}
+              ref={amountEl}
+            />
+          </div>
+          <div className="form-group">
+            <button className="btn">Generate</button>
+          </div>
         </div>
       </form>
       <div className="container">
